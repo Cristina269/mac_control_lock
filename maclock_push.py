@@ -5,8 +5,7 @@ import time
 from functools import wraps
 from telegram.ext import Updater
 
-
-
+# 这里换成你的token
 updater = Updater(token='Your bot token', use_context=True)
 dispatcher = updater.dispatcher
 timer = updater.job_queue
@@ -53,10 +52,12 @@ def delete(update: Update, context: CallbackContext):
 
 
 def callback_minute(context: telegram.ext.CallbackContext):
+    # 这里换成你的chat_id
     result = context.bot.send_message(chat_id='Your own chat_id',
                                       text=mac.lock_status())
     message_id = result['message_id']
     time.sleep(58)
+    # 这里换成你的chat_id
     context.bot.deleteMessage(chat_id='Your own chat_id', message_id=message_id)
 
 
