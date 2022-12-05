@@ -21,6 +21,10 @@
 
 ​	还加入了一个定时器，每隔一分钟发送一次锁屏状态，并且自动删除上一次发送的状态，防止刷屏。
 
+## 效果图
+
+![](2022-12-05 _ 09.15.20_Telegram.gif)
+
 ## 更好的使用方法
 
 ​	通过pyinstaller `pyinstaller --noconsole maclock_push.py`打包成app，然后在设置-用户与群组里把app设置为开机启动。
